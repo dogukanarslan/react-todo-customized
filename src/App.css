@@ -1,22 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+/*Global*/
+:root{
+  font-family: "Roboto",sans-serif;
+}
+*{
+  box-sizing: border-box;
+}
+ul{
+  list-style: none;
+}
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+/* Header */
+header{
+  min-height: 10vh;
+}
+header h1{
+  font-size: 2rem;
+}
+
+/* Main */
+main{
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Add Todo */
+form{
+  margin-top: 20px;
+}
+.addToInput{
+  padding: 10px;
+}
+.addToButton{
+  padding: 10px;
+  border:none;
+  color: #fff;
+  background-color: tomato;
+  font-size: 1rem;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* Todo Lists */
+.TodoLists{
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.TodoList{
+  margin-top: 10px;
+}
+
+.TodoList h1{
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.listItem{
+  cursor: pointer;
+}
+.listItem:hover{
+  opacity: .6;
+}
+.checked{
+  text-decoration: line-through;
+}
+.important{
+  font-weight: bold;
+  color: red;
+}
+.invisible{
+  opacity: 0.2;
+}
+.itemRemoveButton{
+  color: red;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-left: 10px;
+  font-size: 1.4rem;
+}
+
+/* Remove All */
+.removeButton{
+  background-color: tomato;
+  color: #fff;
+  border: none;
+  height: 44px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  width: 300px;
+}
+
+/* Footer */
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  background-color: #282c34;
+  color: #fff
 }
