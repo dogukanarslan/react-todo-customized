@@ -19,8 +19,8 @@ function Todo(props){
   return(
       <div className={itemVisibility}>
         <p className={itemClass} style={{display:"inline-block"}} onClick={()=>props.toggleChecked(id)}>{props.content}</p>
-        <span className="itemRemoveButton" onClick={()=>props.toggleImportant(id)}>!</span>
-        <span className="itemRemoveButton" onClick={()=>props.removeItem(id)}>X</span>
+        {visible ? <button className="itemRemoveButton" onClick={()=>props.toggleImportant(id)}>!</button> : <button disabled className="itemRemoveButton" onClick={()=>props.toggleImportant(id)}>!</button>}
+        {visible ? <button className="itemRemoveButton" onClick={()=>props.removeItem(id)}>X</button> : <button disabled className="itemRemoveButton" onClick={()=>props.removeItem(id)}>X</button>}
       </div>
   )
 }

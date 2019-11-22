@@ -20,6 +20,7 @@ class ShowOnlyImportant extends React.Component{
     this.props.showOnlyImportant();
     this.setState({button: !this.state.button},()=>window.localStorage.setItem("button",JSON.stringify(this.state.button)))
   }
+
   render(){
     return(
       <div>
